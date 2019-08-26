@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
-import Animals from '../Components/Animals'
+import AnimalsList from '../Components/AnimalsList'
 import { dogs } from '../assets/data/dogs.json';
 
 class App extends Component {
@@ -13,7 +13,7 @@ class App extends Component {
     }
   }
 
-  clickHandler = (index) => {
+  handleClick = (index) => {
     console.log('click', index);
   }
 
@@ -21,7 +21,7 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <Animals dogs={dogs} clickHandler={this.clickHandler} />
+        <AnimalsList dogs={dogs} handleClick={this.handleClick} />
         <Footer />
       </div>
     );
